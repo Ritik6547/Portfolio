@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u**@%cb(%*og+!!+h^!-jpzpq0g1(9ipx%m2)jyikp#1emqc9-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['app.alphasite.com']
+ALLOWED_HOSTS = ['app.alphasite.com','127.0.0.1']
 
 
 # Application definition
