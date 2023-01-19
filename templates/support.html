@@ -63,11 +63,13 @@
     </nav>
     <div class="container my-3">
       <h2 class="text-center mb-3 px-3">Support</h2>
-      <form class="row g-3">
+      <form class="row g-3" action="/support/" method="post">
+        {% csrf_token %}
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">First Name</label>
           <input
-            type="email"
+            type="name"
+            name="first"
             class="form-control"
             id="inputEmail4"
             placeholder="abc"
@@ -76,7 +78,8 @@
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Last Name</label>
           <input
-            type="password"
+            type="name"
+            name="last"
             class="form-control"
             id="inputPassword4"
             placeholder="xyz"
@@ -85,7 +88,8 @@
         <div class="col-12">
           <label for="inputAddress" class="form-label">Email</label>
           <input
-            type="text"
+            type="email"
+            name="email"
             class="form-control"
             id="inputAddress"
             placeholder="example@gmail.com"
@@ -96,6 +100,7 @@
           <label for="inputCity" class="form-label">City</label>
           <input
             type="text"
+            name="city"
             class="form-control"
             id="inputCity"
             placeholder="City Name"
@@ -103,19 +108,23 @@
         </div>
         <div class="col-md-4">
           <label for="inputState" class="form-label">State</label>
-          <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option>...</option>
-          </select>
+          <input
+            type="text"
+            name="state"
+            class="form-control"
+            id="inputState"
+            placeholder="State Name"
+          />
         </div>
         <div class="col-md-2">
           <label for="inputZip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="inputZip" />
+          <input type="text" name="zip" class="form-control" id="inputZip" />
         </div>
         <div class="col-8">
           <label for="inputAddress2" class="form-label">Query</label>
           <input
             type="text"
+            name="query"
             class="form-control"
             id="inputAddress2"
             placeholder="Type your query"
@@ -123,7 +132,7 @@
         </div>
 
         <div class="col-12">
-          <button type="button" class="btn btn-success">Submit</button>
+          <button type="submit" class="btn btn-success">Submit</button>
         </div>
       </form>
     </div>
