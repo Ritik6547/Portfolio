@@ -2,6 +2,11 @@ from django.contrib import admin
 from django.urls import path,include
 from home import views
 
+admin.site.site_header = "Admin Panel"
+admin.site.site_title = "Admin Dashboard"
+admin.site.index_title = "Welcome to portal"
+
+
 urlpatterns = [
     
     path('', views.index, name='index'),
